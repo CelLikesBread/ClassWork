@@ -1,0 +1,9 @@
+//make an orb
+string $orb[] = `polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1`;
+select $orb;
+move 0 1 0;
+scale 1 2 2;
+rotate 45 45 45;
+select $orb.f[200];
+move 0 1 0;
+rename $orb[0] "TheOrb";
