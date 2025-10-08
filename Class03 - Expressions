@@ -1,0 +1,14 @@
+//Expressions
+
+pCube1.rotateY = frame * pCylinder1.translateY * 3;
+
+pCube1.rotateY = frame * pCylinder1.translateY * 3;
+pCube1.rotateX = frame * pCylinder1.translateY * 2;
+pCube1.rotateZ = frame * pCube1.rotateY * 4;
+
+pCylinder1.rotateY = pCube1.translateZ * -30;
+pCylinder2.rotateY = pCube1.translateZ * -30;
+pCylinder3.rotateY = pCube1.translateZ * -30;
+pCylinder4.rotateY = pCube1.translateZ * -30;
+
+frontWheels.rotateY = pCylinder5.rotateZ * -1
