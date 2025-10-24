@@ -1,0 +1,24 @@
+//Forest Generator
+//Cel Bispham
+
+//Variables:
+//$numTrees = user input for number of trees required
+//$treeList = list of tree type options
+//$count = number of times the loop has run
+//$place = where to put tree
+
+//Must do:
+//Accept a users input of how many trees they want
+//Start a loop for how many trees they want
+//In each loop, generate a random number for what tree to use
+//Place the tree into the world
+//Generate random co-ordinates
+//Move tree to new place
+//If loop done, end program
+
+//Should do:
+//Have multiple tree designs
+
+//Could do:
+//Store tree locations in list
+//Check if another tree is in the way
