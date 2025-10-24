@@ -1,2 +1,4 @@
 float $random = floor(rand(5 + .5));
 $random = int($random);
+
+int $vari = `rand 1 10 `;
