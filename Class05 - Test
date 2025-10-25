@@ -1,0 +1,17 @@
+//Test 1
+//Make cube
+string $cube[] = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+rename $cube[0] "Dave";
+//Make orb
+string $orb[] = `polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1`;
+rename $orb[0] "Alice";
+//Move
+select Dave;
+move 2 2 2;
+select -cl;
+select -r Alice;
+move -r 0 1 0;
+//Group
+group -n group1 Dave Alice;
+//Rotate
+rotate -r 0 90 0;
