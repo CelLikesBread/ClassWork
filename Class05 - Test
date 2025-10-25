@@ -53,3 +53,7 @@ if ($randObj == 2){
         polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
         rename "pCylinder1" "NewThing";
 }
+
+//Test 4
+string $circle[] = `polyDisc -sides 3 -subdivisionMode 4 -subdivisions 3 -radius 1`;
+rename $circle[0] "control";
