@@ -29,3 +29,27 @@ for ($each in $sel) {
     rotate $randX $randY $randZ;
     select -cl;
 }
+
+//Test 3
+//Delete existing
+if (`objExists "NewThing"`){
+    delete "NewThing";
+}
+//Random
+int $randObj = `rand 0 3 `;
+//New object
+if ($randObj == 0){
+        print "Option 1";
+        polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1;
+        rename "pCube1" "NewThing";
+}
+if ($randObj == 1){
+        print "Option 2";
+        polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+        rename "pSphere1" "NewThing";
+}
+if ($randObj == 2){
+        print "Option 3";
+        polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+        rename "pCylinder1" "NewThing";
+}
