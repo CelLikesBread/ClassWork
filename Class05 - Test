@@ -55,5 +55,20 @@ if ($randObj == 2){
 }
 
 //Test 4
+//Get all selected
+string $sel[] = `ls -sl`;
+int $lenList = size($sel);
+//Make circle
 string $circle[] = `polyDisc -sides 3 -subdivisionMode 4 -subdivisions 3 -radius 1`;
 rename $circle[0] "control";
+//Make new attribute
+addAttr -ln "objScale"  -at double  -dv 0 |control;
+setAttr -e-keyable true |control.objScale;
+//Group objects
+for ($each in $sel){
+     group $each;
+     //connectAttr control.objScale $each.scaleX;
+     //connectAttr control.objScale $each.scaleY;
+     //connectAttr control.objScale $each.scaleZ;
+}
+//how to select newest group?   each connect should be to group, not each
