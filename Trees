@@ -100,3 +100,44 @@ rename leaf3 "leafDone";
 rename leaf4 "leafDone";
 rename leaf5 "leafDone";
 rename newTree "treeMoved";
+
+
+//Tree 3
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "trunk";
+scale -r 0.361 2.388 0.361;
+move -r 0 2.255 0;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "branch1";
+scale -r 0.335 1.658 0.335;
+move -r -0.825 5.588 0.777;
+rotate -r 27.828 0 37.484;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "branch2";
+scale -r 0.276 2.955 0.276;
+move -r 0.762 6.686 -1.852;
+rotate -r -37.782 -6.684 -15.13;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "leaf1";
+scale -r 3.186 0.309 3.186;
+move -r -1.618 6.761 1.645;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "leaf2";
+scale -r 4.911 0.366 4.911;
+move -r 1.196 8.712 -2.903;
+
+group -n newTree trunk branch1 branch2 leaf1 leaf2;
+
+move -r `rand -10 10` 0 `rand -10 10`;
+rotate -r 0 `rand 0 360` 0;
+
+rename trunk "trunkDone";
+rename branch1 "branchDone";
+rename branch2 "branchDone";
+rename leaf1 "leafDone";
+rename leaf2 "leafDone";
+rename newTree "treeDone";
