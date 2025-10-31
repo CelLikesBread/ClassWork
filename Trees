@@ -28,3 +28,75 @@ rename baseLeaf "baseDone";
 rename midLeaf "midDone";
 rename topLeaf "topDone";
 rename newTree "treeMoved";
+
+
+//Tree 2
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "trunk";
+scale -r 0.418 3.333 0.418;
+move -r 0 3.352 0;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "branch1";
+scale -r 0.345 2.022 0.345;
+move -r -1.187 7.976 0.302;
+rotate -r 16.929 50.435 49.507;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "branch2";
+scale -r 0.402 2.271 0.402;
+move -r 1.294 8.032 0.461;
+rotate -r 11.082 17.958 -49.001;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "branch3";
+scale -r 0.363 2.393 0.363;
+move -r 0 8.39 -1.392;
+rotate -r -40.927 0 0;
+
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "branch4";
+scale -r 0.206 0.881 0.206;
+move -r -0.903 3.054 0;
+rotate -r 16.747 -6.054 54.221;
+
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rename pSphere1 "leaf1";
+scale -r 2.152 2.152 2.152;
+move -r 2.97 9.085 0.7;
+
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rename pSphere1 "leaf2";
+scale -r 1.973 1.973 1.973;
+move -r -2.2 8.817 0;
+
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rename pSphere1 "leaf3";
+scale -r 2.333 2.333 2.333;
+move -r -0.357 10.771 -2.037;
+
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rename pSphere1 "leaf4";
+scale -r 1.459 1.459 1.459;
+move -r 0 7.257 0.781;
+
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rename pSphere1 "leaf5";
+move -r -2.1 3.676 0;
+
+group -n newTree trunk branch1 branch2 branch3 branch4 leaf1 leaf2 leaf3 leaf4 leaf5;
+
+move -r `rand -10 10` 0 `rand -10 10`;
+rotate -r 0 `rand 0 360` 0;
+
+rename trunk "trunkDone";
+rename branch1 "branchDone";
+rename branch2 "branchDone";
+rename branch3 "branchDone";
+rename branch4 "branchDone";
+rename leaf1 "leafDone";
+rename leaf2 "leafDone";
+rename leaf3 "leafDone";
+rename leaf4 "leafDone";
+rename leaf5 "leafDone";
+rename newTree "treeMoved";
