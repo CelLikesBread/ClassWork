@@ -1,16 +1,30 @@
 //Tree 1
 polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCylinder1 "trunk";
 scale -r 0.447 1.1 0.447;
 move -r 0 1.036 0;
 
 polyCone -r 1 -h 2 -sx 20 -sy 1 -sz 0 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCone1 "baseLeaf";
 scale -r 2.232 2.056 2.232;
 move -r 0 3.737 0;
 
 polyCone -r 1 -h 2 -sx 20 -sy 1 -sz 0 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCone1 "midLeaf";
 scale -r 1.998 2.056 1.998;
 move -r 0 5.388 0;
 
 polyCone -r 1 -h 2 -sx 20 -sy 1 -sz 0 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+rename pCone1 "topLeaf";
 scale -r 1.745 1.946 1.745;
 move -r 0 6.859 0;
+
+group -n newTree trunk baseLeaf midLeaf topLeaf;
+
+move -r `rand -10 10` 0 `rand -10 10`;
+
+rename trunk "trunkDone";
+rename baseLeaf "baseDone";
+rename midLeaf "midDone";
+rename topLeaf "topDone";
+rename newTree "treeMoved";
