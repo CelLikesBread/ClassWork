@@ -144,17 +144,29 @@ global proc tree3(){
     rename newTree "treeMoved";
 }
 
-int $numTrees = 5;   //will be user input
-
-for ($i = 0; $i < $numTrees; $i++){
-    int $vari = `rand 0 3 `;
-    if ($vari == 0){
-        tree1();
-    }
-    else if ($vari == 1){
-        tree2();
-    }
-    else if ($vari == 2){
-        tree3();
+global proc greatExplosionMurderGodDynaTree() {
+    int $numTrees = 5;   //will be user input
+    
+    for ($i = 0; $i < $numTrees; $i++){
+        int $vari = `rand 0 3 `;
+        if ($vari == 0){
+            tree1();
+        }
+        else if ($vari == 1){
+            tree2();
+        }
+        else if ($vari == 2){
+            tree3();
+        }
     }
 }
+
+global proc slideee() {
+    
+}
+
+window -title "Forest Randomiser" -widthHeight 200 100 treeees;
+columnLayout -adjustableColumn true -rowSpacing 10;
+    intSlider -min 0 -max 20 -value 0 -step 1;
+    button -label "Make Trees" -command "greatExplosionMurderGodDynaTree()";
+showWindow treeees;
